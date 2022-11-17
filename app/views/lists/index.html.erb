@@ -1,0 +1,16 @@
+<h1><strong>All your lists of movies (<%= List.count%>) </strong></h1>
+
+<div id="lists">
+  <ul>
+    <% @lists.each do |list| %>
+    <li>
+      <p>
+      <%= link_to list.name, list_path(list) %>
+      </p>
+    </li>
+    <% end %>
+  </ul>
+</div>
+
+<%= link_to "Create a new list", new_list_path %>
+
